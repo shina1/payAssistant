@@ -1,0 +1,275 @@
+/* some basic resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  /* display: block; */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0 30px;
+  max-width: 440px;
+  border: 2px solid black;
+}
+/* basic reset ends */
+
+/* canvas animation effect */
+#canvas1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: black; */
+}
+/* canvas animation ends */
+.header {
+  position: relative;
+  height: 95vh;
+  display: flex;
+  justify-content: space-between;
+}
+.hd-lft {
+  position: relative;
+  /* border: 2px solid black; */
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/lftBg.svg);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.imgs {
+  width: 600px;
+  position: absolute;
+  left: 79.5674px;
+  top: 120px;
+}
+.logo {
+  position: absolute;
+  left: 80px;
+  top: 20px;
+}
+.hd-rgt {
+  width: 50%;
+  position: relative;
+  text-align: center;
+}
+.text-container {
+  width: 450px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading-primary {
+  /* text-transform: uppercase; */
+  backface-visibility: hidden;
+  /* margin-bottom: 60px; */
+  /* text-align: center; */
+}
+.heading-primary-main {
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 39px;
+  /* line-height: 42px; */
+  letter-spacing: 1.5px;
+  color: #000000;
+  text-align: left;
+  animation-name: moveInTop;
+  animation-duration: 2.5s;
+  /* animation-timing-function: ease-out; */
+  margin-bottom: 20px;
+}
+.heading-primary-sub {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin-bottom: 25px;
+  color: #000000;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+/* text animation */
+
+@keyframes moveInTop {
+  0% {
+    opasity: 0;
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateX(20%);
+  }
+  40% {
+    transform: translateX(-20%);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    opasity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* button animation and styling */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(63, 22, 22, 0.2);
+}
+.btn-green {
+  background: #1d8a4b;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn-animated {
+  animation-name: btnMoveIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.75s;
+  animation-fill-mode: backwards;
+}
+@keyframes btnMoveIn {
+  0% {
+    opasity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opasity: 1;
+    transform: translateX(0);
+  }
+}
+/* media query for responsiveness */
+@media (min-width: 560px) {
+  body {
+    max-width: 1300px;
+    border: 2px solid blue;
+    margin: 0 auto;
+  }
+  .header {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hd-lft {
+    position: relative;
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 50%;
+    background-image: url(../img/lftBg.svg);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .imgs {
+    width: 600px;
+    position: absolute;
+    left: 79.5674px;
+    top: 120px;
+  }
+  .logo {
+    position: absolute;
+    left: 80px;
+    top: 20px;
+  }
+  .hd-rgt {
+    width: 50%;
+    position: relative;
+    text-align: center;
+  }
+  .text-container {
+    width: 450px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px;
+  }
+  .heading-primary {
+    backface-visibility: hidden;
+  }
+  .heading-primary-main {
+    font-weight: 900;
+    font-size: 39px;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .heading-primary-sub {
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-left: 10px;
+  }
+}
