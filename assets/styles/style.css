@@ -46,6 +46,7 @@ body {
   position: absolute;
   top: 120px;
   left: 130px;
+  width: auto;
 }
 .logo {
   position: absolute;
@@ -266,7 +267,7 @@ body {
 .gallery-img:hover {
   opacity: 0.9;
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.8);
 }
 .gallery-view-box .card-body p {
   font-family: Roboto;
@@ -306,6 +307,11 @@ body {
   line-height: 20px;
   color: #000000;
 }
+.btn-fag:link,
+.btn-faq:visited {
+  padding: 15px 20px;
+}
+/* footer section styling */
 footer {
   background: #000000;
   height: 200px;
@@ -332,7 +338,7 @@ footer .copyrite p {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 123.4%;
   color: #ffffff;
 }
