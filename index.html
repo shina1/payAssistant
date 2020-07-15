@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pay Assistant</title>
-    <link rel="stylesheet" href="assets/styles/style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles/bootstrap-css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
   <body>
+    <!-- header section -->
     <section class="container-fluid p-4">
       <div class="row head-box">
         <div class="col-sm-12 col-md-8 col-lg-7 hd-lft ml-lg-3">
@@ -20,25 +26,313 @@
             <img src="assets/img/logo.png" alt="logo" />
           </div>
           <div class="imgs">
-            <img src="assets/img/man1.png" alt="man1" class="img1" />
-            <img src="assets/img/woman.png" alt="woman" class="img2" />
-            <img src="assets/img/man2.png" alt="man2" class="img3" />
+            <img src="assets/img/woman.svg" alt="woman" class="img2" />
+            <img src="assets/img/iphone.svg" alt="phone" />
+            <img src="assets/img/man2.svg" alt="man" class="img3" />
           </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4 hd-rgt ml-lg-3">
           <div class="text-container">
             <h1 class="heading-primary">
-              <span class="heading-primary-main"
+              <span class="heading-primary-main" style="font-size: 3.5vw;"
                 >Now you can go about your business, and we will assist you pay
                 all bills.</span
               >
-              <span class="heading-primary-sub">Something big is coming</span>
+              <span class="heading-primary-sub" style="font-size: 2vw;"
+                >Something big is coming</span
+              >
             </h1>
             <a href="#" class="btn-tp btn-grn btn-animated">Notify Me</a>
           </div>
         </div>
       </div>
     </section>
+    <!-- App features display section -->
+    <section class="app-features ml-5 mr-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center mt-5 mb-3 app-tittle">
+            <h2>Our Amazing Features</h2>
+          </div>
+          <!-- first card row -->
+          <div class="row mt-4 ml-4 mr-4 mb-1 p-2">
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img src="assets/img/padlock.svg" alt="image" class="mb-3" />
+                  <h5 class="card-title mb-3">All In One</h5>
+                  <p class="card-text mb-3">
+                    Manage all of your bills and subscription from one platform.
+                    Saves you the hassel of understanding how different
+                    platforms works.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img
+                    src="assets/img/portfolio.svg"
+                    alt="portfolio image"
+                    class="mb-3"
+                  />
+                  <h5 class="card-title mb-3">Automatic Renewal</h5>
+                  <p class="card-text mb-3">
+                    You dont have to worry about beign suddenly cut off from
+                    your basic need. We will automatically renew all your bill
+                    immediately it expires.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img
+                    src="assets/img/portfolio.svg"
+                    alt="portfolio inage"
+                    class="mb-3"
+                  />
+                  <h5 class="card-title mb-3">Payment Processing</h5>
+                  <p class="card-text mb-3">
+                    Easily handle all of your bill paytment process, all you
+                    need is a one time setup, then we take it from there.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second card row -->
+          <div class="row ml-4 mr-4 mb-2 p-2">
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img src="assets/img/bell1.svg" alt="image" class="mb-3" />
+                  <h5 class="card-title mb-3">Instant notification</h5>
+                  <p class="card-text mb-3">
+                    Never lose track of the activities involving your bill
+                    subscription. Get instant accurate notification on the go
+                    and on time too
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img
+                    src="assets/img/portfolio.svg"
+                    alt="portfolio image"
+                    class="mb-3"
+                  />
+                  <h5 class="card-title mb-3">Payment Processing</h5>
+                  <p class="card-text mb-3">
+                    Easily handle all of your bill paytment process, all you
+                    need is a one time setup, then we take it from there.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="card text-center">
+                <div class="card-body m-3">
+                  <img
+                    src="assets/img/portfolio.svg"
+                    alt="portfolio inage"
+                    class="mb-3"
+                  />
+                  <h5 class="card-title mb-3">Payment Processing</h5>
+                  <p class="card-text mb-3">
+                    Easily handle all of your bill paytment process, all you
+                    need is a one time setup, then we take it from there.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- app gallery section -->
+    <section class="gallery ml-5 mr-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 gallery-tittle text-center mt-5 mb-3">
+            <h2 class="mt-2">More Than just An App</h2>
+          </div>
+        </div>
+        <div class="gallery-view-box">
+          <!-- fisrt gallery row -->
+          <div class="row">
+            <div class="card-group">
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second gallery row -->
+          <div class="row">
+            <div class="card-group">
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img mb-0"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+              <div class="card m-2">
+                <img
+                  class="card-img-top gallery-img"
+                  src="assets/img/Midnight Green.png"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+                    lorwm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-btn-box text-right">
+            <a href="#" class="btn-tp btn-grn btn-animated mt-5 mb-5"
+              >Notify Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fag section -->
+    <section class="faq m-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 faq-container">
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>What is payAssistant?</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>Who can Use PayAsistant?</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>How do i go about registering on the platform?</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>Can i deactivate the automatic subscription feature?</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>How do i go about registering on the platform</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+            <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
+              <h5>How do i go about registering on the platform</h5>
+              <img src="assets/img/Arrow 3.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div
+              class="faq-container-foot pl-5 pr-5 d-flex justify-content-between m-4"
+            >
+              <p>
+                Dont pass Up The Opportunity To Be The First To Experience The
+                PayAssistant Life
+              </p>
+              <a href="#" class="btn-tp btn-grn btn-animated">Notify Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="foot d-flex justify-content-between">
+              <div class="footLogo">
+                <img src="assets/img/foot-logo.png" alt="" />
+              </div>
+              <div class="social-icons d-flex justify-content-between">
+                <a href="#"> <i class="fa fa-facebook"></i> </a>
+                <a href="#"> <i class="fa fa-twitter"></i> </a>
+                <a href="#"> <i class="fa fa-instagram"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 mt-5 pt-3">
+            <div class="copyrite text-center">
+              <p class="mt-1">
+                COPYRIGHT &copy 2020 DESIGNED BY PAYASSIST ALL RIGHT RESERVED
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="assets/js/particle.js"></script>
     <script src="assets/js/bootstrap-js/jquery.js"></script>
     <script src="assets/js/bootstrap-js/bootstrap.js"></script>
