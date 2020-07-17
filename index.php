@@ -17,9 +17,12 @@
     <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
   <body>
-    <!-- header section -->
-    <section class="container-fluid p-4">
-      <div class="row head-box">
+    <!-- <div class="spinner-border text-danger">
+      <span class="sr-only">Loading...</span>
+    </div> -->
+    <!-- header section starts -->
+    <section class="container-fluid p-4 sect-wrap">
+      <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-7 hd-lft">
           <canvas id="canvas1"></canvas>
           <div class="logo">
@@ -31,6 +34,8 @@
             <img src="assets/img/man2.svg" alt="man" class="img3" />
           </div>
         </div>
+        <!-- </div>
+      <div class="row"> -->
         <div class="col-sm-12 col-md-12 col-lg-4 hd-rgt">
           <div class="text-container">
             <h1 class="heading-primary">
@@ -40,9 +45,82 @@
               >
               <span class="heading-primary-sub">Something big is coming</span>
             </h1>
-            <a href="#" class="btn-tp btn-grn btn-animated">Notify Me</a>
+            <a
+              href="#myModal"
+              type="button"
+              class="btn-tp btn-grn btn-animated"
+              data-toggle="modal"
+              >Notify Me</a
+            >
+          </div>
+          <div class="modal $modal-show-transform" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header" style="border: none;">
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                  <div class="mod-img mb-5">
+                    <img src="assets/img/bell1.svg" alt="" />
+                  </div>
+                  <div class="mod-text">
+                    <h2 class="mb-3">Get Notified Now</h2>
+                    <h5 class="mb-3">
+                      Be first to know about the latest updates and get
+                      exclusive offer on our official debut
+                    </h5>
+                  </div>
+                  <form
+                    action="API/formProcess.php"
+                    method="POST"
+                    class="was-validated"
+                  >
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                        name="email"
+                        required
+                      />
+
+                      <div class="valid-feedback">Valid.</div>
+                      <div class="invalid-feedback">
+                        Please fill out this field.
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-grn btn-mod"
+                      name="submit"
+                      id="mod-btn"
+                      onclick="openPopUp();"
+                    >
+                      Submit
+                    </button>
+                    <div id="pop" class="msg-box">
+                      <p>
+                        Your information have been saved, you will be notified
+                        once we launch
+                      </p>
+                      <div class="cancel" onclick="closePopUp();"></div>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Modal footer -->
+              </div>
+            </div>
           </div>
         </div>
+        <!-- The Modal -->
       </div>
     </section>
     <!-- App features display section -->
@@ -73,15 +151,15 @@
               <div class="card text-center">
                 <div class="card-body m-2">
                   <img
-                    src="assets/img/portfolio.svg"
+                    src="assets/img/renew.png"
                     alt="portfolio image"
                     class="mb-3"
                   />
                   <h5 class="card-title mb-3">Automatic Renewal</h5>
                   <p class="card-text mb-3">
-                    You dont have to worry about beign suddenly cut off from
-                    your basic need. We will automatically renew all your bill
-                    immediately it expires.
+                    Immediately the subscription of your product expires, and
+                    with prior notice, PayAssistant will charge the bill to your
+                    credit card.
                   </p>
                 </div>
               </div>
@@ -122,14 +200,15 @@
               <div class="card text-center">
                 <div class="card-body m-2">
                   <img
-                    src="assets/img/portfolio.svg"
+                    src="assets/img/re.png"
                     alt="portfolio image"
                     class="mb-3"
                   />
-                  <h5 class="card-title mb-3">Payment Processing</h5>
+                  <h5 class="card-title mb-3">Transaction Summary</h5>
                   <p class="card-text mb-3">
-                    Easily handle all of your bill paytment process, all you
-                    need is a one time setup, then we take it from there.
+                    Always get a summary of all your transactions, what
+                    subscription you spent most on, and the one you spent less
+                    on.
                   </p>
                 </div>
               </div>
@@ -138,14 +217,15 @@
               <div class="card text-center">
                 <div class="card-body m-">
                   <img
-                    src="assets/img/portfolio.svg"
+                    src="assets/img/solid.png"
                     alt="portfolio inage"
                     class="mb-3"
                   />
-                  <h5 class="card-title mb-3">Payment Processing</h5>
+                  <h5 class="card-title mb-3">Easy Account Setup</h5>
                   <p class="card-text mb-3">
-                    Easily handle all of your bill paytment process, all you
-                    need is a one time setup, then we take it from there.
+                    It is a fast and easy process to setup a free PayAssistant
+                    account, and you trigger autoamtic bill and subscription
+                    renewal.
                   </p>
                 </div>
               </div>
@@ -169,14 +249,19 @@
               <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card m-2">
                   <img
-                    class="card-img-top gallery-img"
-                    src="assets/img/Midnight Green.png"
+                    class="card-img-top gallery-img pop"
+                    src="assets/img/x-3.png"
                     alt="Card image cap"
                   />
+
+                  <!-- <div class="img-text" style="margin-top: -60px;">
+                    <p style="font-size:15px, font-weight:bold;">
+                      Click to view
+                    </p>
+                  </div> -->
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      ALL YOUR BILL PAYMENT ON ONE PLATFORM
                     </p>
                   </div>
                 </div>
@@ -185,13 +270,12 @@
                 <div class="card m-2">
                   <img
                     class="card-img-top gallery-img"
-                    src="assets/img/Midnight Green.png"
+                    src="assets/img/x-15.png"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      KEEP TRACK OF HOW YOU SPEND YOUR MONEY AND ON WHAT.
                     </p>
                   </div>
                 </div>
@@ -200,13 +284,12 @@
                 <div class="card m-2">
                   <img
                     class="card-img-top gallery-img"
-                    src="assets/img/Midnight Green.png"
+                    src="assets/img/x-13.png"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      EASILY AUTOMATE YOUR BILL PAYMENT
                     </p>
                   </div>
                 </div>
@@ -220,13 +303,12 @@
                 <div class="card m-2">
                   <img
                     class="card-img-top gallery-img mb-0"
-                    src="assets/img/Midnight Green.png"
+                    src="assets/img/x-12.png"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      GET A BREAKDOWN OF EVERY MONEY SPENT
                     </p>
                   </div>
                 </div>
@@ -235,13 +317,12 @@
                 <div class="card m-2">
                   <img
                     class="card-img-top gallery-img"
-                    src="assets/img/Midnight Green.png"
+                    src="assets/img/x-13.png"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      EASY ONE TIME SETUP OF BANK DETAILS
                     </p>
                   </div>
                 </div>
@@ -250,13 +331,12 @@
                 <div class="card m-2">
                   <img
                     class="card-img-top gallery-img"
-                    src="assets/img/Midnight Green.png"
+                    src="assets/img/x-14.png"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <p class="card-text">
-                      Lorem lorem lorem lorem lorem lorem lorem lorem lorem
-                      lorem lorwm
+                      GET PROMPT NOTIFICATION ON ALL ACTIVITIES.
                     </p>
                   </div>
                 </div>
@@ -271,38 +351,152 @@
           </div>
         </div>
       </div>
+      <!--  bootstrap modal   -->
+     
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); m-3" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F3tyaEpGZBxUpfPYHu3f9V3%2Fpay-assistant%3Fnode-id%3D0%253A1&chrome=DOCUMENTATION" allowfullscreen></iframe>
+
+      </div>
     </section>
-    <!-- fag section -->
+    <!-- fag section starts -->
     <section class="faq m-4">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 faq-container">
+            <!-- faq card 1 -->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>What is payAssistant?</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse"
+              ></a>
             </div>
+            <div class="collapse" id="faq-collapse">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
+            </div>
+            <!-- faq card 2-->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>Who can Use PayAsistant?</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse2"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse2"
+              ></a>
             </div>
+            <div class="collapse" id="faq-collapse2">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
+            </div>
+            <!-- faq card3 -->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>How do i go about registering on the platform?</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse3"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse3"
+              ></a>
             </div>
+            <div class="collapse" id="faq-collapse3">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
+            </div>
+            <!-- faq card 4-->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>Can i deactivate the automatic subscription feature?</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse4"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse4"
+              ></a>
             </div>
+            <div class="collapse" id="faq-collapse4">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
+            </div>
+            <!-- faq card 5-->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>How do i go about registering on the platform</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse6"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse6"
+              ></a>
             </div>
+            <div class="collapse" id="faq-collapse6">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
+            </div>
+            <!-- faq card 6-->
             <div class="faq-box d-flex justify-content-between m-5 pl-5 pr-5">
               <h5>How do i go about registering on the platform</h5>
-              <img src="assets/img/Arrow 3.svg" alt="" />
+              <a
+                class="btn fa fa-angle-down"
+                data-toggle="collapse"
+                href="#faq-collapse7"
+                role="button"
+                aria-expanded="false"
+                aria-controls="faq-collapse7"
+              ></a>
+            </div>
+            <div class="collapse" id="faq-collapse7">
+              <div class="card card-body">
+                <p class="faq-p">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt
+                  sapiente ea proident.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <!-- faq foot section -->
         <div class="row">
           <div class="col-sm-12">
             <div
@@ -347,8 +541,10 @@
         </div>
       </div>
     </footer>
-    <script src="assets/js/particle.js"></script>
+
     <script src="assets/js/bootstrap-js/jquery.js"></script>
+    <script src="assets/js/particle.js"></script>
     <script src="assets/js/bootstrap-js/bootstrap.js"></script>
+    <script src="assets/styles/custome.js"></script>
   </body>
 </html>
