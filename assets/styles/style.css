@@ -11,7 +11,7 @@ img {
 }
 body {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
+  background: #fff;
   margin: 0 auto;
   width: 100%;
 }
@@ -21,68 +21,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 50%;
   height: 80%;
 }
 /* canvas animation ends */
-.wrap {
-  display: flex;
-}
-.hd-lft {
-  position: relative;
-  width: 50%;
-  height: 50%;
-  background-image: url(../img/lftBg.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.hd-rgt {
-  width: 50%;
-  padding: 0 20px;
-}
-.imgs .img2 {
-  padding-left: 30px;
-}
-.hd-rgt {
-  width: 450px;
-  position: absolute;
-  top: 40%;
-  left: 65%;
-  padding: 10px;
-  /* transform: translate(-30%, -30%); */
-}
 
-.heading-primary {
-  backface-visibility: hidden;
-}
-.heading-primary-main {
-  display: block;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 39px;
-  /* line-height: 42px; */
-  letter-spacing: 1.5px;
-  color: #000000;
-  text-align: left;
-  animation-name: moveInTop;
-  animation-duration: 2.5s;
-  /* animation-timing-function: ease-out; */
-  /* margin-bottom: 20px; */
-}
-.heading-primary-sub {
-  display: block;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  letter-spacing: 1.5px;
-  text-align: left;
-  /* margin-bottom: 25px; */
-  color: #000000;
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-}
 .mod-text {
   text-align: center;
   margin-top: -30px;
@@ -456,146 +399,120 @@ footer .copyrite p {
   line-height: 123.4%;
   color: #ffffff;
 }
-/* media query settings for smaller screen */
-@media (max-width: 1350px) {
-  .hd-lft {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    background-image: url(../img/lftBg.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hd-rgt {
-    width: 50%;
-    padding: 0 20px;
-  }
-  .imgs .img2 {
-    padding-left: 30px;
-  }
-  .hd-rgt {
-    width: 450px;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    padding: 10px;
-    /* transform: translate(-30%, -30%); */
-  }
+/* =======================header settings========== */
+
+.head > * {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
-@media (max-width: 1300px) {
-  .hd-lft {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    background-image: url(../img/lftBg.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hd-rgt {
-    width: 50%;
-    padding: 0 20px;
-  }
-  .imgs .img2 {
-    padding-left: 30px;
-  }
-  .hd-rgt {
-    width: 450px;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    padding: 10px;
-    /* transform: translate(-30%, -30%); */
-  }
+.hd-lft {
+  background: url("../img/lftBg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 300px;
+  margin: 0 auto;
+  height: 300px;
+  /* border: 1px solid red; */
 }
-@media (max-width: 1250px) {
-  .hd-lft {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    background-image: url(../img/lftBg.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hd-rgt {
-    width: 50%;
-    padding: 0 20px;
-  }
-  .imgs .img2 {
-    padding-left: 30px;
-  }
-  .hd-rgt {
-    width: 450px;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    padding: 10px;
-    /* transform: translate(-30%, -30%); */
-  }
+.hd-lft img {
+  width: 70px;
+  height: 140px;
+  margin-top: 125px;
 }
-@media (max-width: 1100px) {
-  .hd-lft {
-    position: relative;
-    width: %90;
-    height: 50%;
-    background-image: url(../img/lftBg.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hd-rgt {
-    width: 90%;
-    padding: 0 20px;
-  }
-  .imgs .img2 {
-    padding-left: 30px;
-  }
-  .hd-rgt {
-    width: 450px;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    padding: 10px;
-    /* transform: translate(-30%, -30%); */
-  }
+.hd-lft .iphone-img {
+  margin-left: -30px;
 }
-@media (max-width: 960px) {
-  .hd-lft {
-    position: relative;
-    width: 90%;
-    height: 100%;
-    background-image: url(../img/lftBg.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .hd-rgt {
-    width: 90%;
-    padding: 0 20px;
-  }
-  .imgs .img2 {
-    padding-left: 30px;
-  }
-  .hd-rgt {
-    width: 450px;
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    padding: 10px;
-    /* transform: translate(-30%, -30%); */
-  }
+.hd-lft .man-img {
+  margin-left: -20px;
 }
-/* landscape view */
-@media (max-width: 767px) {
-  .hd-lft {
-    width: 90%;
+.hd-lft .fem-img {
+  margin-right: 20px;
+}
+
+.hd-rgt {
+  margin-top: 30px;
+  padding: 10px;
+}
+.hd-rgt h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+  backface-visibility: hidden;
+  animation-name: moveInTop;
+  animation-duration: 2.5s;
+}
+
+.hd-rgt p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  color: #000000;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+/* .hd-rgt a {
+  width: 200px;
+  height: 150px;
+  background-color: #1d8a4b;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #fff;
+  text-transform: capitalize;
+} */
+
+@media screen and (min-width: 600px) {
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: auto;
+    padding: 0;
+  }
+  .hd-lft {
+    max-width: 65%;
+    margin: 0 auto;
+    height: 500px;
+    flex: 1 0 auto;
   }
   .hd-rgt {
-    width: 90%;
-    height: auto;
+    max-width: 35%;
+    margin: 0 auto;
+    height: 300px;
+    text-align: left;
+  }
+  .hd-lft img {
+    width: 150px;
+    height: 300px;
+    margin-top: 125px;
+  }
+  .hd-rgt h4 {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .hd-rgt p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .hd-lft {
+    height: 700px;
+  }
+  .hd-lft img {
+    width: 180px;
+    height: 350px;
+    margin-top: 255px;
   }
 }
 
