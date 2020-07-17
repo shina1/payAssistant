@@ -21,9 +21,9 @@
       <span class="sr-only">Loading...</span>
     </div> -->
     <!-- header section starts -->
-    <section class="container-fluid p-4 sect-wrap">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-7 hd-lft">
+    <section class="contain sect-wrap">
+      <div class="row wrap">
+        <div class="hd-lft">
           <canvas id="canvas1"></canvas>
           <div class="logo">
             <img src="assets/img/logo.png" alt="logo" />
@@ -36,7 +36,7 @@
         </div>
         <!-- </div>
       <div class="row"> -->
-        <div class="col-sm-12 col-md-12 col-lg-4 hd-rgt">
+        <div class="hd-rgt">
           <div class="text-container">
             <h1 class="heading-primary">
               <span class="heading-primary-main"
